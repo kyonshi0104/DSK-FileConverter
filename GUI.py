@@ -25,7 +25,7 @@ config = configparser.ConfigParser()
 config.read('settings.ini')
 
 image_format = ["bmp","dib","eps","gif","icns","ico","im","jpeg","msp","pcx","png","ppm","sgi","spider","tga","tiff","webp","xmb","jpg","pdf","palm"]
-image_read_format = ["bmp","dib","eps","gif","icns","ico","im","jpeg","jpeg2000","msp","pcx","png","ppm","sgi","spider","tga","tiff","webp","xmb","blp","cur","dcx","fli","flc","fpx","frex","gbr","gd","imt","iptc","naa","mcidas","mic","mpo","pcd","pixar","psd","wal","wmf","xpm"]
+image_read_format = ["bmp","jpg","dib","eps","gif","icns","ico","im","jpeg","jpeg2000","msp","pcx","png","ppm","sgi","spider","tga","tiff","webp","xmb","blp","cur","dcx","fli","flc","fpx","frex","gbr","gd","imt","iptc","naa","mcidas","mic","mpo","pcd","pixar","psd","wal","wmf","xpm"]
 audio_format = ["mp3","m4v","mp4","avi","flv","wav","ogg","oga","ts","qt","wma","asf","mov","m4a","alac","ape","mac","tta","mka","mkv","flac","aiff","aif","aifc","webm","weba"]
 audio_read_format = ["mp3","wav","ogg","oga","ts","wma","asf","mov","m4a","alac","ape","mac","tta","mka","mkv","flac","aiff","aif","aifc"]
 video_format = ["mp4","m4v","mp3","avi","flv","wav","ogg","oga","ts","qt","wma","asf","mov","m4a","alac","ape","mac","tta","mka","mkv","flac","aiff","aif","aifc","webm","weba","dat","flv","wmv","asf","mpeg","mpg","vob","mkv","asf","wmv","rm","rmvb","vob"]
