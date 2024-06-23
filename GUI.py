@@ -68,7 +68,7 @@ class app(ctk.CTk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.geometry("720x500")
-        self.title("DSK File Converter / v.1.3.0")
+        self.title("DSK File Converter / v.1.3.1")
         self.iconbitmap(resourcePath("resource\\icon.ico"))
         self.resizable(False,False)
         self.yotei = ctk.CTkLabel(self,text="DSK File Converter",font=(FONT_TYPE,30))
@@ -179,9 +179,10 @@ class settings(ctk.CTkToplevel):
 class settings_f(ctk.CTkFrame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        print(os.path.abspath("save").replace("\\","/"))
         self.d_wlavel = ctk.CTkLabel(self,text="保存するフォルダ",font=(FONT_TYPE,15))
         self.d_box = ctk.CTkTextbox(self,font=(FONT_TYPE,15),width=325,height=20)
-        if config.get("path","output") == os.path.abspath("save").replace("\\","/"):
+        if config.get("path","output") == os.path.abspath("save").replace("\\","/") or config.get("path","output") == "save":
             self.d_box.insert('0.0','既定')
         else:
             self.d_box.insert('0.0',extract_and_ellipsis(config.get("path","output")))
@@ -249,12 +250,17 @@ def theme_change(choice):
 
 def save_filepath_change(textbox:ctk.CTkTextbox):
     d = fid.askdirectory()
+    if not d:
+        return
     config["path"]["output"] = d
     with open('settings.ini', 'w') as configfile:
         config.write(configfile)
     textbox.configure(state="normal")
     textbox.delete("1.0","end")
-    textbox.insert('0.0',extract_and_ellipsis(d))
+    if config.get("path","output") == os.path.abspath("save").replace("\\","/") or config.get("path","output") == "save":
+            textbox.insert('0.0','既定')
+    else:
+        textbox.insert('0.0',extract_and_ellipsis(d))
     textbox.configure(state="disabled")
 
 def file_path_ask(textbox: ctk.CTkTextbox, mode : str):
