@@ -1,5 +1,14 @@
-## このアプリケーションは、過去に customtkinter の動作確認を兼ねて作成されたコンバータです。現在は更新されておらず、今後のメンテナンスも予定していません。 ご利用の際は、より信頼性の高い別のアプリケーションを使用することをおすすめします。 本ツールはあくまで参考程度にご覧ください。
-## This application is a converter created some time ago as a test project for experimenting with customtkinter. It is no longer maintained and will not receive future updates. For practical use, we recommend choosing a more reliable alternative. Please consider this tool as a reference or example only.
+このアプリケーションは、過去に customtkinter の動作確認を兼ねて作成されたコンバータです。現在は更新されておらず、今後のメンテナンスも予定していません。 ご利用の際は、より信頼性の高い別のアプリケーションを使用することをおすすめします。 本ツールはあくまで参考程度にご覧ください。
+This application is a converter created some time ago as a test project for experimenting with customtkinter. It is no longer maintained and will not receive future updates. For practical use, we recommend choosing a more reliable alternative. Please consider this tool as a reference or example only.
+
+
+
+
+
+
+
+
+
 
 -------  DSK File Converter  --------
 
@@ -77,3 +86,4 @@ We would appreciate it if you could let us know if there are any flaws or bugs i
 
 
 以上
+
